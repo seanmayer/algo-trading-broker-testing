@@ -24,3 +24,6 @@ tpqoa @ git+https://github.com/yhilpisch/tpqoa.git@4a79f30b7095642844ef99741d9bf
 
 # Interactive Brokers
 ib_async==2.0.1
+
+# Visualisations
+matplotlib>=3.8.0
