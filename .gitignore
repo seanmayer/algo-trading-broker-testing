@@ -31,6 +31,9 @@ Thumbs.db
 # Logs
 *.log
 
+# Data files
+pandas/data/temp.csv
+
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
