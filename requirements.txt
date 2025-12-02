@@ -27,3 +27,6 @@ ib_async==2.0.1
 
 # Visualisations
 matplotlib>=3.8.0
+
+# Yahoo Finance
+yfinance==0.2.66
