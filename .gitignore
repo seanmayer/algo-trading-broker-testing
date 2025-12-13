@@ -54,3 +54,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Data files
+pandas-financial-data-analysis/different_assets.csv
