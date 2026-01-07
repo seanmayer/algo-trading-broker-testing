@@ -1,8 +1,8 @@
-# OANDA Algo Trading Basics
+# OANDA Algorithmic Trading Basics
 
-A comprehensive proof-of-concept for algorithmic trading with OANDA and Interactive Brokers APIs.
+A proof-of-concept for algorithmic trading with OANDA and Interactive Brokers APIs.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.8 or higher
