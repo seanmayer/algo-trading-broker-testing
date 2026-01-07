@@ -1,4 +1,4 @@
-# OANDA Algorithmic Trading Basics
+# Algorithmic Trading Basics
 
 A proof-of-concept for algorithmic trading with OANDA and Interactive Brokers APIs.
 
