@@ -58,3 +58,4 @@ wheels/
 # Data files
 pandas-financial-data-analysis/different_assets.csv
 pandas-financial-data-analysis/close.csv
+pandas-financial-data-analysis/msft.csv
