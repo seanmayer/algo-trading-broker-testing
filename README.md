@@ -1,131 +1,112 @@
-# Algorithmic Trading Basics
+# OANDA Algo Trading Basics
 
-A proof-of-concept for algorithmic trading with OANDA and Interactive Brokers APIs.
+Educational project for learning market data analysis and algorithmic trading workflows with:
+- `pandas`-based financial analysis notebooks
+- broker-focused examples for OANDA and Interactive Brokers (IBKR)
+
+This repository is structured as a learning workspace, not a production trading system.
+
+## What Changed
+The project now includes a substantially expanded notebook curriculum under `pandas-financial-data-analysis/`, including topics like:
+- return frameworks (simple, log, compound)
+- annualization and rolling statistics
+- covariance/correlation and diversification
+- short-selling intuition and coding challenges
+
+## Project Structure
+
+```text
+oanda-algo-trading-basics/
+├── pandas-financial-data-analysis/   # Main financial analytics notebook track (0..21)
+├── pandas-timeseries-data/           # Pandas time-series fundamentals
+├── brokers/
+│   ├── oanda/                        # OANDA examples and utilities
+│   └── ibkr/                         # IBKR notebooks and examples
+├── requirements.txt
+├── .env.template
+└── README.md
+```
 
 ## Quick Start
 
-### Prerequisites
-- Python 3.8 or higher
-- OANDA account (for OANDA examples)
-- Interactive Brokers account with TWS/IB Gateway (for IBKR examples)
+### 1) Create and activate a virtual environment
 
-### Installation
-
-1. **Clone or download this repository**
-
-2. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set up your trading credentials** (see Configuration section below)
-
-4. **Start trading!** Open the Jupyter notebooks and begin exploring.
-
-## 📁 Project Structure
-
-```
-oanda-algo-trading-basics/
-├── brokers/
-│   ├── oanda/          # OANDA-specific implementations
-│   └── ibkr/           # Interactive Brokers implementations
-│       └── notebooks/  # Jupyter notebooks for IBKR
-├── requirements.txt    # Python dependencies
-└── README.md          # This file
+```bash
+python3 -m venv venv
+source venv/bin/activate
 ```
 
-## 📚 Available Notebooks
+### 2) Install dependencies
 
-### Interactive Brokers (IBKR)
-- **`HistoricalAccountValues.ipynb`** - Fetch and analyze historical market data
-- **`TradingChallenge.ipynb`** - Complete SMA crossover trading system with performance analysis
-
-## ⚙️ Configuration
-
-### OANDA Setup
-1. Create a `.env` file in the project root
-2. Add your OANDA credentials:
-   ```
-   OANDA_API_KEY=your_api_key_here
-   OANDA_ACCOUNT_ID=your_account_id_here
-   OANDA_ENVIRONMENT=practice  # or 'live' for real trading
-   ```
-
-### Interactive Brokers Setup
-1. Install and run TWS (Trader Workstation) or IB Gateway
-2. Enable API connections in TWS/Gateway settings:
-   - Go to Global Configuration → API → Settings
-   - Enable "Enable ActiveX and Socket Clients"
-   - Note the Socket Port (usually 7497 for TWS, 4001 for Gateway)
-3. The notebooks will connect to `localhost:7497` by default
-
-## 🛡️ Important Safety Notes
-
-⚠️ **ALWAYS USE PAPER TRADING FIRST!**
-
-- Start with demo/paper trading accounts
-- Test all strategies thoroughly before risking real money
-- The code includes educational examples - modify for your risk tolerance
-- Never commit API keys or credentials to version control
-
-## 💡 Getting Started Examples
-
-### 1. Historical Data Analysis
-```python
-# Run HistoricalAccountValues.ipynb
-# - Fetch EUR/USD historical data
-# - Analyze price movements
-# - Convert data to pandas DataFrames
+```bash
+pip install -r requirements.txt
 ```
 
-### 2. Complete Trading System
-```python
-# Run TradingChallenge.ipynb
-# - Implement SMA crossover strategy
-# - Execute backtests on historical data
-# - Analyze performance metrics
-# - Optional: Run live signal monitoring
+### 3) Launch Jupyter
+
+```bash
+jupyter notebook
 ```
 
-## 📊 Features
+Open notebooks in `pandas-financial-data-analysis/` to start with the analytics track.
 
-- ✅ **Multiple Broker Support** - OANDA and Interactive Brokers
-- ✅ **Historical Data** - Fetch and analyze market data
-- ✅ **Trading Strategies** - SMA crossover and more
-- ✅ **Risk Management** - Stop-loss, take-profit, position sizing
-- ✅ **Performance Analysis** - Win rate, Sharpe ratio, drawdown analysis
-- ✅ **Visualization** - Charts and performance metrics
-- ✅ **Backtesting** - Test strategies on historical data
+## Recommended Learning Path (Pandas Financial Analysis)
 
-## 🔧 Dependencies
+A practical sequence:
+1. `1-yahooFinance.ipynb`
+2. `2-priceChangesAndFinancialReturns.ipynb`
+3. `3-measuring-reward-and-risk-finanical-instruments.ipynb`
+4. `5-investment-multiple-and-CAGR.ipynb`
+5. `6-compound-returns-and-geometric-return.ipynb`
+6. `10-log-returns.ipynb`
+7. `12-comparing-financial-instruments.ipynb`
+8. `13-none-normality-of-finacial-returns.ipynb`
+9. `14-annualising-return-and-risk.ipynb`
+10. `15-resample-smoothing-financial-data.ipynb`
+11. `16-rolling-statisitics.ipynb`
+12. `21-covariance-correlation-and-portfolio-diversification.ipynb`
 
-Key libraries used:
-- **ib_async** - Interactive Brokers API
-- **oandapyV20** - OANDA REST API
-- **pandas/numpy** - Data analysis
-- **matplotlib** - Visualization
-- **requests** - HTTP requests
+Challenge notebooks are included throughout (e.g. `4`, `7`, `11`, `17`, `20`).
 
-## 🤝 Contributing
+## Data Files Used by Notebooks
 
-This is a proof-of-concept project. Feel free to:
-- Add new trading strategies
-- Improve risk management
-- Add support for other brokers
-- Enhance visualizations
+Common local datasets in `pandas-financial-data-analysis/`:
+- `close.csv`
+- `different_assets.csv`
+- `msft.csv`
 
-## ⚠️ Disclaimer
+Several notebooks can also fetch data online (e.g., `yfinance`) and include fallbacks when fetch is unavailable.
 
-This software is for educational purposes only. Trading involves significant risk of loss. The authors are not responsible for any financial losses incurred through the use of this software. Always do your own research and consider consulting with a financial advisor.
+## Broker Tracks
 
-## 📞 Support
+### OANDA
+- Path: `brokers/oanda/`
+- Includes connection helpers and example trading/data scripts.
+- Configure credentials via `.env` (see `.env.template`).
 
-For questions or issues:
-1. Check the notebook comments and documentation
-2. Review the broker API documentation
-3. Test with paper trading accounts first
-4. Ensure all dependencies are properly installed
+### IBKR
+- Path: `brokers/ibkr/`
+- Includes notebooks for connectivity, contracts, market data, and trading examples.
+- Requires TWS/IB Gateway with API enabled.
 
----
+## Configuration
 
-**Happy Trading! 📈**
+Create a `.env` file in the project root (copy from `.env.template`) and add required keys for broker examples.
+
+Example OANDA fields:
+
+```env
+OANDA_API_KEY=your_api_key_here
+OANDA_ACCOUNT_ID=your_account_id_here
+OANDA_ENVIRONMENT=practice
+```
+
+## Safety Notes
+
+- Use paper/demo environments first.
+- Do not commit API keys or account secrets.
+- Treat all notebooks/scripts as educational examples and validate logic before any live deployment.
+
+## Disclaimer
+
+This repository is for educational purposes only. Trading and investing involve risk, including potential loss of capital.
