@@ -12,12 +12,13 @@ The project now includes a substantially expanded notebook curriculum under `pan
 - annualization and rolling statistics
 - covariance/correlation and diversification
 - short-selling intuition and coding challenges
+- leverage, margin trading, and path-dependent risk
 
 ## Project Structure
 
 ```text
 oanda-algo-trading-basics/
-├── pandas-financial-data-analysis/   # Main financial analytics notebook track (0..21)
+├── pandas-financial-data-analysis/   # Main financial analytics notebook track (0..23)
 ├── pandas-timeseries-data/           # Pandas time-series fundamentals
 ├── brokers/
 │   ├── oanda/                        # OANDA examples and utilities
@@ -64,9 +65,16 @@ A practical sequence:
 9. `14-annualising-return-and-risk.ipynb`
 10. `15-resample-smoothing-financial-data.ipynb`
 11. `16-rolling-statisitics.ipynb`
-12. `21-covariance-correlation-and-portfolio-diversification.ipynb`
+12. `18-shortselling-explainer.ipynb`
+13. `19-shortselling-example.ipynb`
+14. `20-coding-challenge-shortselling.ipynb`
+15. `21-portfolio-returns.ipynb`
+16. `21-covariance-correlation-and-portfolio-diversification.ipynb`
+17. `22-leverage-and-margin-trading-returns.ipynb`
+18. `22-leverage-with-real-data.ipynb`
+19. `23-coding-challenge-leverage.ipynb`
 
-Challenge notebooks are included throughout (e.g. `4`, `7`, `11`, `17`, `20`).
+Challenge notebooks are included throughout (e.g. `0`, `4`, `7`, `11`, `17`, `20`, `23`).
 
 ## Data Files Used by Notebooks
 
