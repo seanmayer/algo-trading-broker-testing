@@ -28,5 +28,8 @@ ib_async==2.0.1
 # Visualisations
 matplotlib>=3.8.0
 
+# Jupyter & Notebook Kernel
+ipykernel==7.0.1
+
 # Yahoo Finance
 yfinance==0.2.66
